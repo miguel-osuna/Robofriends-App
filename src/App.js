@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, Component } from "react";
+import CardList from "./CardList.js";
+import SearchBox from "./SearchBox.js";
+import { robots } from "./robots.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    // React.Component Constructor
+    super();
+    this.state = {
+      robots: robots,
+      search_field: ""
+    };
+  }
+
+  onSearchChange = event => {
+    // Adds the text input to search_field
+    this.setState({ search_field: event.target.value });
+
+    // Filters the robots object array with the search_field text input
+  };
+
+  render() {
+    const filtered_robots = this.state.robots.filter(robot => {
+      return robot.name
+        .toLowerCase()
+        .includes(this.state.search_field.toLowerCase());
+    });
+
+    // Changes the CardList of Robots Searched
+    console.log(filtered_robots);
+
+    return (
+      <Fragment>
+        <div className="tc">
+          <h1> Robot Friends</h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <CardList robots={filtered_robots} />
+        </div>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
