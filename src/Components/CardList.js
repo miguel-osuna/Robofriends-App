@@ -4,7 +4,6 @@ import Card from "./Card.js";
 // Destructuring of props = { robots }
 const CardList = ({ robots }) => {
   // Card Component List
-
   return (
     <Fragment>
       <div>

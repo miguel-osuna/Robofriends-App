@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from "react";
-import CardList from "./CardList.js";
-import SearchBox from "./SearchBox.js";
-import { robots } from "./robots.js";
+import CardList from "../Components/CardList.js";
+import SearchBox from "../Components/SearchBox.js";
+import Scroll from "../Components/Scroll.js";
+import ErrorBoundary from "../Components/ErrorBoundary.js";
 import "./App.css";
 
 class App extends Component {
@@ -28,31 +29,28 @@ class App extends Component {
   };
 
   render() {
-    const filtered_robots = this.state.robots.filter(robot => {
-      return robot.name
-        .toLowerCase()
-        .includes(this.state.search_field.toLowerCase());
+    const { robots, search_field } = this.state;
+    const filtered_robots = robots.filter(robot => {
+      return robot.name.toLowerCase().includes(search_field.toLowerCase());
     });
 
     // Changes the CardList of Robots Searched
     // console.log(filtered_robots);
-    if (this.state.robots.length === 0) {
-      return (
-        <div>
-          <h1 className="tc"> Loading, please wait</h1>
-        </div>
-      );
-    } else {
-      return (
-        <Fragment>
-          <div className="tc">
-            <h1 className="f1"> Robofriends</h1>
-            <SearchBox searchChange={this.onSearchChange} />
+    return !robots.length ? (
+      <div>
+        <h1 className="tc"> Loading, please wait</h1>
+      </div>
+    ) : (
+      <Fragment>
+        <div className="tc">
+          <h1 className="f1"> Robofriends</h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <Scroll>
             <CardList robots={filtered_robots} />
-          </div>
-        </Fragment>
-      );
-    }
+          </Scroll>
+        </div>
+      </Fragment>
+    );
   }
 }
 
