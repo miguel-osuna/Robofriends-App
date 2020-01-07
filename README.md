@@ -35,7 +35,7 @@ git@2.17.1 or higher
 $ git clone https://github.com/miguel-osuna/Robofriends-App.git
 
 # Go into the your local repository
-$ cd example
+$ cd Robofriends-App
 
 # Remove current origin repository
 $ git remote remove origin
