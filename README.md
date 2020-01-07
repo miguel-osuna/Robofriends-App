@@ -12,7 +12,7 @@ Robofriends App created with Create React App for Udemy's course "The Complete W
 
 ### :high_brightness: Visuals
 
-![](img/robofriends_app.png)
+![](img/robofriends_example.png)
 
 ## :bulb: Getting Started
 
