@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Project Title
 
-In the project directory, you can run:
+## :book: Description 
+Robofriends App created with Create React App for Udemy's course "The Complete Web Developer Course.
 
-### `npm start`
+### :dart: Features 
+List of all the features of the project 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- SPA created with Create React App
+- Uses Robohash API
+- Styled with Tachyons
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### :high_brightness: Visuals
+![](img/robofriends_app.png)
 
-### `npm test`
+## :bulb: Getting Started 
+Follow the instructions below to get a copy of the project, whether it's for development or testing purposes. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :clipboard: Prerequisites
+You'll need Git, and Node.js (which comes with npm) installed on your computer.
+```
+node@v12.13.0 or higher
+npm@6.13.1 or higher
+git@2.17.1 or higher
+```
 
-### `npm run build`
+### :computer: Installation
+```
+# Clone this repository
+$ git clone https://github.com/miguel-osuna/Robofriends-App.git
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Go into the your local repository
+$ cd example
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Remove current origin repository
+$ git remote remove origin
+```
+Create React App will be installed under *react-scripts* when all dependencies are installed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+# Install all project dependencies
+$ npm install 
 
-### `npm run eject`
+# Start and watch the project
+$ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Once your server has started, go to ```https://localhost:3000/``` and you will see the website running on a Development Server.*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :rocket: Deployment
+Once you are ready to deploy your project, read the [following tutorial](https://create-react-app.dev/docs/deployment) to choose your hosting
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##  :wrench: Built With 
+-   [React](https://reactjs.org/)  - Front-End JavaScript library
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :performing_arts: Authors 
+- **Miguel Osuna** - https://github.com/miguel-osuna
 
-## Learn More
+## :ledger: License 
+This project is licensed under the MIT License - see the LICENSE.md file for details.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
