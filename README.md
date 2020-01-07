@@ -6,8 +6,6 @@ Robofriends App created with Create React App for Udemy's course "The Complete W
 
 ### :dart: Features
 
-List of all the features of the project
-
 - SPA created with Create React App
 - Robohash API
 - Styled with Tachyons
